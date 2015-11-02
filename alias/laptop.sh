@@ -6,5 +6,7 @@ alias epi='ssh ivan@79.157.158.81 -p 6321'
 # Alias de directorios específicos
 alias proxectos='cd $HOME/proxectos; ls'
 alias prx='cd $HOME/proxectos; ls'
+alias scripts='cd $HOME/scripts; ls'
+alias scr='cd $HOME/scripts; ls'
 alias bramework='cd $HOME/proxectos/bramework; ls'
 alias bra='cd $HOME/proxectos/bramework; ls'
