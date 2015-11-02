@@ -5,10 +5,10 @@
 
 DIR="$HOME/.bashrc.d"
 
-. $DIR/prompt.sh
-. $DIR/settings.sh
-. $DIR/manpages.sh
-. $DIR/miscelanea.sh
+. $DIR/core/prompt.sh
+. $DIR/core/settings.sh
+. $DIR/core/manpages.sh
+. $DIR/core/miscelanea.sh
 
 . $DIR/alias/directories.sh
 . $DIR/alias/generic.sh
