@@ -12,7 +12,6 @@ DIR="$HOME/.bashrc.d"
 
 . $DIR/alias/directories.sh
 . $DIR/alias/generic.sh
-. $DIR/alias/laptop.sh
 
 if [ -f /usr/bin/pacman ]; then . $DIR/alias/pacman.sh; fi
 if [ -f /usr/bin/apt-get ]; then  . $DIR/alias/apt-get.sh; fi

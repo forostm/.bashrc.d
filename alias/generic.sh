@@ -10,7 +10,7 @@ alias llu='ll -tur'        # Igual ó anterior, pero ordenandoos por data de acc
 alias llk='ll -Sr'         # Lista por tamaño (o máis grande de último)
 alias lle='ll -X'          # Lista por extensión
 alias cp="cp -v"           # Amosa os arquivos que copia
-alias rm='rm -rfv'         # Elimina arquivos e directorios aínda que non estén baleiros
+alias rm='rmt'             # Executa a funcion 'rmt' que move os elementos á papeleira de reciclaxe
 alias mv="mv -v"           # Explica o que está facendo
 alias mkdir='mkdir -pv'    # Crea directorios recursivamente
 alias grep='grep --color'  # Amosa a palabra buscada con cor
@@ -23,9 +23,11 @@ alias fuckoff='poweroff'   # Reinicia o ordenador
 alias cds='echo "`pwd`" > $HOME/.cdsave; echo "Ruta gardada"'  # cd save: Garda o lugar no que te atopas
 alias cdb='cd "`cat $HOME/.cdsave`"; \rm $HOME/.cdsave'        # cd back: Volve ó lugar que gardaches con 'cds' e elimina o aarquivo '.cdsave'
 
-
-alias vi='vim'
+if [ -f '/usr/bin/vim']; then
+  alias vi='vim'
+fi
 alias svim='sudo vim'
+alias skate='sudo kate'
 alias ngrok='ngrok http 80'
 alias server='sudo python -m http.server 80'
 alias extip='curl ifconfig.me/ip'
@@ -33,3 +35,6 @@ alias reload='source $HOME/.bashrc'
 alias bashrc='$EDITOR $HOME/.bashrc && source $HOME/.bashrc'
 alias bashpr='$EDITOR $HOME/.bash_profile && source $HOME/.bash_profile'
 alias bashdr='cd $HOME/.bashrc.d/; ls'
+
+alias pi='ssh ivan@192.168.1.2 -p 6321'
+alias epi='ssh ivan@79.157.158.81 -p 6321'
