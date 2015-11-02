@@ -4,7 +4,12 @@
 #Coa opción '-r' podemos eliminar notas
 #Coa opción '-r' e mais un número, eliminamos esa nota directamente
 #Coa opción '-c'eliminamos tódalas notas
-notas() {
+
+alias nota="note"
+alias notas="note"
+alias notes="note"
+
+note() {
   NOTE="$HOME/.notas"
 
   #Si non existe un arquivo de notas, creao
@@ -27,10 +32,14 @@ notas() {
   
   #Se introduccimos a opción '-c'eliminamos tódalas notas 
   elif [ "$1" == "-c" ];then
-    > $NOTE
+    \rm $NOTE
     echo-blue "Eliminadas tódalas notas"
+    
+  #Se introduccimos a opción '-c'eliminamos tódalas notas 
+  elif [[ "$1" == "-h" || "$1" == "--help" ]];then
+    note_manual
 
-  #Se non hai argumentos, amósanse as notas
+  #Se non hai argumentos, anósanse as notas
   elif [ "$#" == "0" ]; then
     nl -b a "$NOTE"
   
@@ -40,5 +49,19 @@ notas() {
     echo-green "Nota añadida"
   fi 
  }
-#Alias para que tamén funcione en singular
-alias nota=notas
+
+function note_manual {
+    echo "Notas simples."
+    echo "Uso: note (Amosa tódalas notas)"
+    echo "Uso: note <texto> (Escribe unha nota nova)"
+    echo "Uso: note <argumento>"
+    echo "Exemplo: nota Comprar pan (Crea unha nota: 'Comprar pan')"
+    echo "Alias: note/notes/nota/notas"
+    echo "Axuda: note -h (--help)"
+    echo ""
+    echo "Argumentos:"
+    echo "  -r              Eliminar notas"
+    echo "  -r + <número>   Eliminamos a nota número <numero> directamente"
+    echo "  -c              Eliminamos tódalas notas"
+    echo ""
+}

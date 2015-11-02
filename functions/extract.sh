@@ -1,5 +1,8 @@
 # Función para extraer arquivos
 # https://github.com/xvoland/Extract
+
+alias extraer="extract"
+
 extract() {
   if [ -z "$1" ]; then
     echo-blue "Uso: extract <directorio/nome_arquivo>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"

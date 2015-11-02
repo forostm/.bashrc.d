@@ -1,4 +1,5 @@
-#Función para conxelar o estado de un arquivo/ficheiro nun momento dado
+# Función para conxelar o estado de un arquivo/ficheiro nun momento dado
+
 ice() {
   for i in "$@"
   do

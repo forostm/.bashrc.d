@@ -10,7 +10,7 @@ complete -cf sudo                 #Autocompletado tamén co comando 'sudo'
 
 #Bash completion
 if [[ -f /etc/bash_completion ]]; then
-. /etc/bash_completion
+    . /etc/bash_completion
 fi
 
 HISTCONTROL=ignoredups:erasedups  #Se entradas duplicadas

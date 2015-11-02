@@ -1,4 +1,4 @@
-# Alias útiles no meu ordenador personal
+# Alias útiles só no meu ordenador personal
 alias skate='sudo kate'
 alias pi='ssh ivan@192.168.1.2 -p 6321'
 alias epi='ssh ivan@79.157.158.81 -p 6321'

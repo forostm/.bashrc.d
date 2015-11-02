@@ -15,8 +15,21 @@ alias mv="mv -v"           # Explica o que está facendo
 alias mkdir='mkdir -pv'    # Crea directorios recursivamente
 alias grep='grep --color'  # Amosa a palabra buscada con cor
 alias wget='wget -c'       # Se falla a conexión, continúa despois coa descarga
-alias reboot='sudo reboot' # Reinicia o ordenador
 alias x='startx'           # Inicia a interface gráfica
+alias q='exit'             # Salir
+alias reboot='sudo reboot' # Reinicia o ordenador
+alias fuckoff='poweroff'   # Reinicia o ordenador
 
 alias cds='echo "`pwd`" > $HOME/.cdsave; echo "Ruta gardada"'  # cd save: Garda o lugar no que te atopas
 alias cdb='cd "`cat $HOME/.cdsave`"; \rm $HOME/.cdsave'        # cd back: Volve ó lugar que gardaches con 'cds' e elimina o aarquivo '.cdsave'
+
+
+alias vi='vim'
+alias svim='sudo vim'
+alias ngrok='ngrok http 80'
+alias server='sudo python -m http.server 80'
+alias extip='curl ifconfig.me/ip'
+alias reload='source $HOME/.bashrc'
+alias bashrc='$EDITOR $HOME/.bashrc && source $HOME/.bashrc'
+alias bashpr='$EDITOR $HOME/.bash_profile && source $HOME/.bash_profile'
+alias bashdr='cd $HOME/.bashrc.d/; ls'

@@ -21,8 +21,9 @@ bak() {
         bak_restore
       fi
     done
-  elif [ -z "$1" ]; then
-    echo "Introduce un ou varios arquivos/directorios para crear unha copia de seguridade."
+    
+  elif [[ -z "$1" || "$1" == "-h" || "$1" == "--help" ]]; then
+    bak_manual
 
   else
     for i in "$@"
@@ -30,24 +31,36 @@ bak() {
       bak_simplecopy &&
       echo-green "Creada copia de seguridade de '$i'"
     done
+    
   fi
-
+ }
+ 
+ function bak_manual {
+    echo "Introduce un ou varios arquivos/directorios para crear unha copia de seguridade."
+    echo "Uso: bak <argumento> <arquivo/directorio>"
+    echo "Exemplo: bak texto.txt (Crea un arquivo texto.txt.bak)"
+    echo "Axuda: bak -h (--help)"
+    echo ""
+    echo "Argumentos:"
+    echo "  -f    Crea a copia de seguridade e elimina o orixinal"
+    echo "  -r    Restaura unha copia de seguridade (podes escribir o nome con ou sen a extensión .bak)"
+    echo ""
  }
 
-bak_simplecopy() {
+function bak_simplecopy {
   if [ -f "$i".bak -o -d "$i".bak ] && [ ! -f "$i" -o ! -d "$i" ]; then #O segundo condicional é para evitar borrar copias sen ter o orixinal
     \rm -rf "$i.bak" &&
     echo-blue "Eliminada copia antiga de '$i'"
   fi
   \cp -r "$i" "$i.bak"
- }
+}
 
-bak_hardcopy() {
+function bak_hardcopy {
   bak_simplecopy &&
   \rm -rf "$i"
 }
 
-bak_restore() {
+function bak_restore {
   if [ "$EXTENSION" == "bak" ]; then
     \mv "$i" "$FILENAME"
   else
@@ -55,7 +68,7 @@ bak_restore() {
   fi
   echo-green "Restaurada correctamente a copia de seguridade de '$FILENAME'"
 }
-bak_restore_overwrite() {
+function bak_restore_overwrite {
   echo-yellow "ATENCIÓN: Vas sobreescribir o orixinal de '$i'"
   read -p "¿Estás seguro de que queres continuar? (S)i, (N)on: " ANSWER1
   case $ANSWER1 in
