@@ -8,5 +8,5 @@
 3. Load it   
 `source $HOME/.bashrc`
 
-In one line:
+In one line :smirk::   
 `cd $HOME && git clone git@github.com:barcia/.bashrc.d.git && ln $HOME/.bashrc.d/bashrc $HOME/.bashrc && source $HOME/.bashrc`
