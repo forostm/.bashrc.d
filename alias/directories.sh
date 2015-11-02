@@ -17,17 +17,17 @@ alias plantillas='cd $(xdg-user-dir TEMPLATES); ls'
 alias videos='cd $(xdg-user-dir VIDEOS); ls'
 
 # Alias de directorios específicos
-if [ -d '$HOME/proxectos']; then
+if [ -d '$HOME/proxectos' ]; then
   alias proxectos='cd $HOME/proxectos; ls'
   alias prx='cd $HOME/proxectos; ls'
 fi
 
-if [ -d '$HOME/scripts']; then
+if [ -d '$HOME/scripts' ]; then
   alias scripts='cd $HOME/scripts; ls'
   alias scr='cd $HOME/scripts; ls'
 fi
 
-if [ -d '$HOME/proxectos/bramework']; then
+if [ -d '$HOME/proxectos/bramework' ]; then
   alias bramework='cd $HOME/proxectos/bramework; ls'
   alias bra='cd $HOME/proxectos/bramework; ls'
 fi

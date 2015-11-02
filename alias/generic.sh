@@ -23,7 +23,7 @@ alias fuckoff='poweroff'   # Reinicia o ordenador
 alias cds='echo "`pwd`" > $HOME/.cdsave; echo "Ruta gardada"'  # cd save: Garda o lugar no que te atopas
 alias cdb='cd "`cat $HOME/.cdsave`"; \rm $HOME/.cdsave'        # cd back: Volve ó lugar que gardaches con 'cds' e elimina o aarquivo '.cdsave'
 
-if [ -f '/usr/bin/vim']; then
+if [ -f '/usr/bin/vim' ]; then
   alias vi='vim'
 fi
 alias svim='sudo vim'
