@@ -5,6 +5,8 @@ if [ $(hostname) == razzmatazz ]; then
   HOST_COLOR="1;35m"
 elif [ $(hostname) == unicorn ]; then
   HOST_COLOR="1;33m"
+elif [ $(hostname) == server ]; then
+  HOST_COLOR="1;90m"
 else
   HOST_COLOR="1;33m"
 fi
