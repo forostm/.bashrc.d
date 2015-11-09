@@ -23,7 +23,7 @@ if [ -f /usr/bin/apt-get ]; then  . $DIR/alias/apt-get.sh; fi
 . $DIR/functions/cs.sh
 . $DIR/functions/echolores.sh
 . $DIR/functions/extract.sh
-. $DIR/functions/work.sh
+. $DIR/functions/folders.sh
 . $DIR/functions/ice.sh
 . $DIR/functions/mcdir.sh
 . $DIR/functions/new.sh

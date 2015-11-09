@@ -7,3 +7,7 @@ if [ -f "/usr/bin/source-highlight-esc.sh" ]; then
     export LESS=-R 
     export LESSOPEN="| /usr/bin/source-highlight-esc.sh %s"
 fi
+
+# Paths
+PATH="$HOME/scripts:$PATH"
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
