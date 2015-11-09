@@ -15,6 +15,7 @@ alias mv="mv -v"           # Explica o que está facendo
 alias mkdir='mkdir -pv'    # Crea directorios recursivamente
 alias grep='grep --color'  # Amosa a palabra buscada con cor
 alias wget='wget -c'       # Se falla a conexión, continúa despois coa descarga
+alias sudo='sudo '         # Alias para que os demais alias funcionen con sudo
 alias x='startx'           # Inicia a interface gráfica
 alias q='exit'             # Salir
 alias reboot='sudo reboot' # Reinicia o ordenador
