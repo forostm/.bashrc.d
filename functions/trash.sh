@@ -5,7 +5,7 @@
 #Coa opción '-C' limpa a papeleira de reciclaxe da terminal e a do sistema
 
 # Non se crea a función no usuario root
-if [ $(echo $USER) == root ]; then 
+if [ ! $(echo $USER) == root ]; then 
   trash() {
     if [ "$#" == 0 ]; then #Sen opción, entra na papeleira de reciclaxe da terminal e lista o contido
       cd $HOME/.local/share/Trash/terminal
