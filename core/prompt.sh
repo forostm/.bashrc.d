@@ -1,8 +1,8 @@
 # Configuración do prompt
 ## Colores por usuarios
-if [ '$USER' == root ]; then
+if [ $(echo $USER) == root ]; then
   USER_COLOR="1;31m"
-elif [ '$USER' == ivan ]; then
+elif [ $(echo $USER) == ivan ]; then
   USER_COLOR="1;33m"
 else
   USER_COLOR="1;32m"
