@@ -18,10 +18,7 @@ compress() {
 }
 
 function compress_generic {
-  for i in "$@"
-  do
-    tar cvf "${i%%/}.tar" "${i%%/}/"
-  done
+  compress_tar
 }
 
 function compress_tar {

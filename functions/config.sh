@@ -16,7 +16,7 @@ config() {
       git)      config_git ;;
       hostname) config_hostname ;;
       kate)     config_kate ;;
-      kate)     config_locale ;;
+      locale)     config_locale ;;
       pacman)   config_pacman ;;
       vim)      config_vim ;;
       xinit)    config_xinit ;;

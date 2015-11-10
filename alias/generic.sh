@@ -30,7 +30,7 @@ fi
 alias svim='sudo vim'
 alias skate='sudo kate'
 alias ngrok='ngrok http 80'
-alias server='sudo python -m http.server 80'
+alias webserver='sudo python -m http.server 80'
 alias extip='curl ifconfig.me/ip'
 alias reload='source $HOME/.bashrc'
 alias bashrc='$EDITOR $HOME/.bashrc && source $HOME/.bashrc'
@@ -39,3 +39,5 @@ alias bashdr='cd $HOME/.bashrc.d/; ls'
 
 alias pi='ssh ivan@192.168.1.2 -p 6321'
 alias epi='ssh ivan@79.157.158.81 -p 6321'
+
+alias server='ssh ivan@37.139.28.29'
