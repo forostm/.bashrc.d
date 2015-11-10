@@ -1,6 +1,11 @@
 1\. Clone the repository [`.bashrc.d/`](https://github.com/barcia/.bashrc.d) in your home directory   
 ```bash
 cd $HOME
+
+# HTTPS
+https://github.com/barcia/.bashrc.d.git
+
+# SHH
 git clone git@github.com:barcia/.bashrc.d.git
 ```
 
@@ -19,7 +24,12 @@ ln $HOME/.bashrc.d/bash_profile $HOME/.bash_profile
 source $HOME/.bashrc
 ```
 
-* In one line   
+* In one line (HTTPS)   
+```bash
+cd $HOME && git clone https://github.com/barcia/.bashrc.d.git && ln $HOME/.bashrc.d/bashrc $HOME/.bashrc && ln $HOME/.bashrc.d/bash_profile $HOME/.bash_profile && source $HOME/.bashrc
+```
+
+* In one line (SSH)   
 ```bash
 cd $HOME && git clone git@github.com:barcia/.bashrc.d.git && ln $HOME/.bashrc.d/bashrc $HOME/.bashrc && ln $HOME/.bashrc.d/bash_profile $HOME/.bash_profile && source $HOME/.bashrc
 ```
