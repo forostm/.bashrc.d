@@ -11,14 +11,4 @@ sysclean() {
   sudo apt-get -y autoclean;  # Elimina paquetes de instalación almacenados en local
   sudo apt-get -y clean;      # Parecido ó anterior
   rm /var/crash/*;            # Limpa os rexistros de erros
-  
-  # Limpa a papeleira de reciclaxe
-  \rm -rf $HOME/.local/share/Trash/files/*
-  \rm -rf $HOME/.local/share/Trash/files/.*
-  \rm -rf $HOME/.local/share/Trash/info/*
-  \rm -rf $HOME/.local/share/Trash/info/.*
-  if [ -d $HOME/.local/share/Trash/terminal ]; then
-    \rm -rf $HOME/.local/share/Trash/terminal/*
-    \rm -rf $HOME/.local/share/Trash/terminal/.*
-  fi
 }
