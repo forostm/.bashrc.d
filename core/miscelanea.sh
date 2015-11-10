@@ -9,5 +9,10 @@ if [ -f "/usr/bin/source-highlight-esc.sh" ]; then
 fi
 
 # Paths
-PATH="$HOME/scripts:$PATH"
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+if [ -d "$HOME/scripts" ]; then
+    PATH="$PATH:$HOME/scripts"
+fi
+
+if [ -d "/usr/bin/ruby" ]; then
+    PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
+fi
