@@ -2,7 +2,6 @@
 alias install='sudo apt-get install'
 alias search='sudo apt-cache search'
 alias info='sudo apt-cache show'
-alias update='sudo apt-get update'
 alias upgrade='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade -V && sudo apt-get autoremove'
 alias uninstall='sudo apt-get purge'
 sysclean() {

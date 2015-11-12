@@ -8,11 +8,6 @@ shopt -s cmdhist                  #Intenta gardar os comandos multilinea nunha s
 shopt -s histappend               #Añade contido ó historial, non o sobreescribe
 complete -cf sudo                 #Autocompletado tamén co comando 'sudo'
 
-#Bash completion
-if [[ -f /etc/bash_completion ]]; then
-    . /etc/bash_completion
-fi
-
 HISTCONTROL=ignoredups:erasedups  #Se entradas duplicadas
 HISTSIZE=100000                   #Tamaño de historial grande
 HISTFILESIZE=100000               #Tamaño de historial grande

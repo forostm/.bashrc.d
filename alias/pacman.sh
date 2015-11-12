@@ -3,7 +3,7 @@ alias pacman='sudo pacman'
 alias install='yaourt -S'
 alias search='yaourt -Ss'
 alias info='yaourt -Si'
-alias update='yaourt -Syyua'
+alias upgrade='yaourt -Syyua'
 alias uninstall='yaourt -Rns'
 sysclean() {
   if [[ -n $(pacman -Qdt) ]]; then
