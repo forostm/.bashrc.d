@@ -21,8 +21,8 @@ if [[ -d /etc/bash_completion.d && ! -d /usr/share/bash-completion ]]; then
 fi
 
 # Paths
-if [ -d "$HOME/scripts" ]; then
-    PATH="$PATH:$HOME/scripts"
+if [ -d "$DIR_SCRIPTS" ]; then
+  PATH="$PATH:$DIR_SCRIPTS"
 fi
 
 if [ -f "/usr/bin/ruby" ]; then

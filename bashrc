@@ -5,6 +5,8 @@
 
 DIR="$HOME/.bashrc.d"
 
+. $DIR/personal
+
 . $DIR/core/prompt.sh
 . $DIR/core/settings.sh
 . $DIR/core/system.sh

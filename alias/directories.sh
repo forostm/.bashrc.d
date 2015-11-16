@@ -5,29 +5,32 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
+
 alias home='cd $HOME; ls'
-alias documentos='cd $(xdg-user-dir DOCUMENTS); ls'
-alias doc='cd $(xdg-user-dir DOCUMENTS); ls'
-alias descargas='cd $(xdg-user-dir DOWNLOAD); ls'
-alias des='cd $(xdg-user-dir DOWNLOAD); ls'
-alias musica='cd $(xdg-user-dir MUSIC); ls'
-alias imaxes='cd $(xdg-user-dir PICTURES); ls'
-alias imx='cd $(xdg-user-dir PICTURES); ls'
-alias plantillas='cd $(xdg-user-dir TEMPLATES); ls'
-alias videos='cd $(xdg-user-dir VIDEOS); ls'
+alias tmp='cd /tmp/; ls'
+
+alias documentos='cd $DIR_DOCS; ls'
+alias doc='cd $DIR_DOCS; ls'
+alias descargas='cd $DIR_DOWNLOAD; ls'
+alias des='cd $DIR_DOWNLOAD; ls'
+alias musica='cd $DIR_MUSIC; ls'
+alias imaxes='cd $DIR_PICTURES; ls'
+alias imx='cd $DIR_PICTURES; ls'
+alias plantillas='cd $DIR_TEMPLATES; ls'
+alias videos='cd $DIR_VIDEO; ls'
 
 # Alias de directorios específicos
-if [ -d "$HOME/proxectos" ]; then
-  alias proxectos='cd $HOME/proxectos; ls'
-  alias prx='cd $HOME/proxectos; ls'
+if [ -d "$DIR_PROJECTS" ]; then
+  alias proxectos='cd $DIR_PROJECTS; ls'
+  alias prx='cd $DIR_PROJECTS; ls'
 fi
 
-if [ -d "$HOME/scripts" ]; then
-  alias scripts='cd $HOME/scripts; ls'
-  alias scr='cd $HOME/scripts; ls'
+if [ -d "$DIR_SCRIPTS" ]; then
+  alias scripts='cd $DIR_SCRIPTS; ls'
+  alias scr='cd $DIR_SCRIPTS; ls'
 fi
 
-if [ -d "$HOME/proxectos/bramework" ]; then
-  alias bramework='cd $HOME/proxectos/bramework; ls'
-  alias bra='cd $HOME/proxectos/bramework; ls'
+if [ -d "$DIR_PROJECT1" ]; then
+  alias bramework='cd $DIR_PROJECT1; ls'
+  alias bra='cd $DIR_PROJECT1; ls'
 fi
