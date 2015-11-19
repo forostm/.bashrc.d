@@ -1,5 +1,9 @@
 # Aquí van las variables que indican direcciones o claves personales
 
+# ATENCIÓN
+# Elimina este mensaje después de configurar este archivo
+echo "Debes configurar el archivo $HOME/.bashrc.d/private.sh"
+
 # Info
 export HOSTNAME_PERSONAL=""
 export HOSTNAME_RASPBERRY=""
