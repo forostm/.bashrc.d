@@ -5,19 +5,12 @@
 
 DIR="$HOME/.bashrc.d"
 
-. $DIR/personal
+. $DIR/private.sh
 
-. $DIR/core/prompt.sh
-. $DIR/core/settings.sh
-. $DIR/core/system.sh
-. $DIR/core/manpages.sh
+. $DIR/settings.sh
+. $DIR/user.sh
+. $DIR/alias.sh
 
-. $DIR/alias/directories.sh
-. $DIR/alias/generic.sh
-. $DIR/alias/git.sh
-
-if [ -f /usr/bin/pacman ]; then . $DIR/alias/pacman.sh; fi
-if [ -f /usr/bin/apt-get ]; then  . $DIR/alias/apt-get.sh; fi
 
 for i in $(ls $DIR/functions/)
 do

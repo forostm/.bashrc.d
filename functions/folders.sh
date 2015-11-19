@@ -6,8 +6,8 @@ work() {
 }
 
 temp() {
-  FOLDER_NAME="temp"
-  create_folder
+    FOLDER_NAME="temp"
+    create_folder
 }
 
 function create_folder() {

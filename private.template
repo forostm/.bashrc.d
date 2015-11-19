@@ -1,0 +1,26 @@
+# Aquí van las variables que indican direcciones o claves personales
+
+# Info
+export HOSTNAME_PERSONAL=""
+export HOSTNAME_RASPBERRY=""
+export HOSTNAME_SERVER=""
+
+# IP's
+export RASPBERRY=""
+export IRASPBERRY=""
+
+export SERVER=""
+export ISERVER=""
+
+# Directorios
+export DIR_DOCS="$(xdg-user-dir DOCUMENTS)"
+export DIR_DOWNLOAD="$(xdg-user-dir DOWNLOAD)"
+export DIR_MUSIC="$(xdg-user-dir MUSIC)"
+export DIR_PICTURES="$(xdg-user-dir PICTURES)"
+export DIR_TEMPLATES="$(xdg-user-dir TEMPLATES)"
+export DIR_VIDEO="$(xdg-user-dir VIDEOS)"
+
+export DIR_PROJECTS="$HOME/"
+export DIR_PROJECT1="$HOME/"
+
+export DIR_SCRIPTS="$HOME/scripts"
