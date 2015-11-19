@@ -5,16 +5,16 @@
 echo "Debes configurar el archivo $HOME/.bashrc.d/private.sh"
 
 # Info
-export HOSTNAME_PERSONAL=""
-export HOSTNAME_RASPBERRY=""
-export HOSTNAME_SERVER=""
+export HOSTNAME_PERSONAL="insert_hostname"
+export HOSTNAME_RASPBERRY="insert_hostname"
+export HOSTNAME_SERVER="insert_hostname"
 
 # IP's
-export RASPBERRY=""
-export IRASPBERRY=""
+export RASPBERRY="1.1.1.1"
+export IRASPBERRY="user@1.1.1.1"
 
-export SERVER=""
-export ISERVER=""
+export SERVER="2.2.2.2"
+export ISERVER="user@2.2.2.2"
 
 # Directorios
 export DIR_DOCS="$(xdg-user-dir DOCUMENTS)"
