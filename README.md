@@ -21,10 +21,10 @@ source $HOME/.bashrc
 
 * In one line (HTTPS)   
 ```bash
-cd $HOME && git clone https://github.com/barcia/.bashrc.d.git && ln $HOME/.bashrc.d/bashrc $HOME/.bashrc && ln $HOME/.bashrc.d/bash_profile $HOME/.bash_profile && cp $HOME.bashrc.d/private.sh.template $HOME.bashrc.d/private.sh && source $HOME/.bashrc
+cd $HOME && git clone https://github.com/barcia/.bashrc.d.git && ln $HOME/.bashrc.d/bashrc $HOME/.bashrc && ln $HOME/.bashrc.d/bash_profile $HOME/.bash_profile && cp $HOME/.bashrc.d/private.sh.template $HOME/.bashrc.d/private.sh && source $HOME/.bashrc
 ```
 
 * In one line (SSH)   
 ```bash
-cd $HOME && git clone git@github.com:barcia/.bashrc.d.git && ln $HOME/.bashrc.d/bashrc $HOME/.bashrc && ln $HOME/.bashrc.d/bash_profile $HOME/.bash_profile && cp $HOME.bashrc.d/private.sh.template $HOME.bashrc.d/private.sh && source $HOME/.bashrc
+cd $HOME && git clone git@github.com:barcia/.bashrc.d.git && ln $HOME/.bashrc.d/bashrc $HOME/.bashrc && ln $HOME/.bashrc.d/bash_profile $HOME/.bash_profile && cp $HOME/.bashrc.d/private.sh.template $HOME/.bashrc.d/private.sh && source $HOME/.bashrc
 ```
