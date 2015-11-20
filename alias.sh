@@ -76,18 +76,18 @@ alias videos='cd $DIR_VIDEO; ls'
 
 # Alias de directorios específicos
 if [ -d "$DIR_PROJECTS" ]; then
-alias proxectos='cd $DIR_PROJECTS; ls'
-alias prx='cd $DIR_PROJECTS; ls'
+    alias proxectos='cd $DIR_PROJECTS; ls'
+    alias prx='cd $DIR_PROJECTS; ls'
 fi
 
 if [ -d "$DIR_SCRIPTS" ]; then
-alias scripts='cd $DIR_SCRIPTS; ls'
-alias scr='cd $DIR_SCRIPTS; ls'
+    alias scripts='cd $DIR_SCRIPTS; ls'
+    alias scr='cd $DIR_SCRIPTS; ls'
 fi
 
 if [ -d "$DIR_PROJECT1" ]; then
-alias bramework='cd $DIR_PROJECT1; ls'
-alias bra='cd $DIR_PROJECT1; ls'
+    alias bramework='cd $DIR_PROJECT1; ls'
+    alias bra='cd $DIR_PROJECT1; ls'
 fi
 
 
@@ -104,35 +104,35 @@ alias gck='git checkout'
 
 # Administración de paquetes (Pacman e Yaourt)
 if [ -f /usr/bin/pacman ]; then
-alias pacman='sudo pacman'
-alias install='yaourt -S'
-alias search='yaourt -Ss'
-alias info='yaourt -Si'
-alias upgrade='yaourt -Syyua'
-alias uninstall='yaourt -Rns'
-sysclean() {
-if [[ -n $(pacman -Qdt) ]]; then
-sudo pacman -Rns $(pacman -Qdtq) # Elimina paquetes orfos
-echo "Eliminaronse paquetes orfos"
-fi
-sudo pacman -Scc # Elimina paquetes da caché
-rm /var/crash/*  # Limpa os rexistros de erros
-}
+    alias pacman='sudo pacman'
+    alias install='yaourt -S'
+    alias search='yaourt -Ss'
+    alias info='yaourt -Si'
+    alias upgrade='yaourt -Syyua'
+    alias uninstall='yaourt -Rns'
+    sysclean() {
+    if [[ -n $(pacman -Qdt) ]]; then
+        sudo pacman -Rns $(pacman -Qdtq) # Elimina paquetes orfos
+        echo "Eliminaronse paquetes orfos"
+    fi
+    sudo pacman -Scc # Elimina paquetes da caché
+    rm /var/crash/*  # Limpa os rexistros de erros
+    }
 fi
 
 
 # Administración de paquetes (Apt-get)
 if [ -f /usr/bin/apt-get ]; then
-alias install='sudo apt-get install'
-alias search='sudo apt-cache search'
-alias info='sudo apt-cache show'
-alias upgrade='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade -V && sudo apt-get autoremove'
-alias uninstall='sudo apt-get purge'
-sysclean() {
-    sudo apt-get -fy install;   # Repara as dependecias rotas
-    sudo apt-get -y autoremove; # Elimina paquetes que xa non son necesarios
-    sudo apt-get -y autoclean;  # Elimina paquetes de instalación almacenados en local
-    sudo apt-get -y clean;      # Parecido ó anterior
-    rm /var/crash/*;            # Limpa os rexistros de erros
-}
+    alias install='sudo apt-get install'
+    alias search='sudo apt-cache search'
+    alias info='sudo apt-cache show'
+    alias upgrade='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade -V && sudo apt-get autoremove'
+    alias uninstall='sudo apt-get purge'
+    sysclean() {
+        sudo apt-get -fy install;   # Repara as dependecias rotas
+        sudo apt-get -y autoremove; # Elimina paquetes que xa non son necesarios
+        sudo apt-get -y autoclean;  # Elimina paquetes de instalación almacenados en local
+        sudo apt-get -y clean;      # Parecido ó anterior
+        rm /var/crash/*;            # Limpa os rexistros de erros
+    }
 fi

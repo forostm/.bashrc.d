@@ -11,6 +11,10 @@ DIR="$HOME/.bashrc.d"
 . $DIR/user.sh
 . $DIR/alias.sh
 
+if [ -f $HOME/.scripts/scripts-alias.sh ]; then
+    . $HOME/.scripts/scripts-alias.sh
+fi
+
 
 for i in $(ls $DIR/functions/)
 do

@@ -27,4 +27,4 @@ export DIR_VIDEO="$(xdg-user-dir VIDEOS)"
 export DIR_PROJECTS="$HOME/"
 export DIR_PROJECT1="$HOME/"
 
-export DIR_SCRIPTS="$HOME/scripts"
+export DIR_SCRIPTS="$HOME/.scripts"
