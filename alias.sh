@@ -44,6 +44,7 @@ alias bashdr='cd $HOME/.bashrc.d/; ls'
 if [ $(hostname) == $HOSTNAME_PERSONAL ]; then
   alias pi='ssh $IRASPBERRY'
   alias server='ssh $ISERVER'
+  alias serverftp='sftp $ISERVER'
 fi
 
 
