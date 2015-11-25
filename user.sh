@@ -18,15 +18,14 @@ fi
 
 export PS1='\[\e['$USER_COLOR'\]\u\[\e[m\]\[\e[1;30m\]@\[\e[m\]\[\e['$HOST_COLOR'\]\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\]\[\e[1;30m\]\$\[\e[m\]\[\e[1;35m\]$(__git_ps1 " (%s)")\[\e[m\] \[\e[1;30m\]>\[\e[m\] '
 
-# Benvida
-if [ "$(echo $LANG)" == "gl_ES.UTF-8" ]; then
-  echo -n "Hola $USER, hoxe é "; date '+%A %-d de %B do %Y'
-fi
-
 
 # Variables globais
 export EDITOR="vim"
 export PAGER="less"
+export RASPBERRY="192.168.1.2"
+export IRASPBERRY="ivan@192.168.1.2"
+export SERVER="37.139.28.29"
+export ISERVER="ivan@37.139.28.29"
 
 
 # Paths
