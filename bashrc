@@ -5,8 +5,6 @@
 
 DIR="$HOME/.bashrc.d"
 
-. $DIR/private.sh
-
 . $DIR/settings.sh
 . $DIR/user.sh
 . $DIR/alias.sh
