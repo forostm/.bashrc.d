@@ -33,7 +33,7 @@ alias svim='sudo vim'
 alias skate='sudo kate'
 alias ngrok='ngrok http 80'
 alias webserver='sudo python -m http.server 80'
-alias extip='curl ifconfig.me/ip'
+alias ipext='curl ifconfig.me/ip'
 alias reload='source $HOME/.bashrc'
 alias bashrc='$EDITOR $HOME/.bashrc && source $HOME/.bashrc'
 alias bashpr='$EDITOR $HOME/.bash_profile && source $HOME/.bash_profile'
@@ -41,8 +41,9 @@ alias bashdr='cd $HOME/.bashrc.d/; ls'
 
 
 # Útiles só no ordenador personal
-if [ $(hostname) == $HOSTNAME_PERSONAL ]; then
+if [ $(hostname) == "laptop" ]; then
   alias pi='ssh $IRASPBERRY'
+  alias piftp='sftp $IRASPBERRY'
   alias server='ssh $ISERVER'
   alias serverftp='sftp $ISERVER'
 fi
@@ -76,19 +77,19 @@ alias plantillas='cd $DIR_TEMPLATES; ls'
 alias videos='cd $DIR_VIDEO; ls'
 
 # Alias de directorios específicos
-if [ -d "$DIR_PROJECTS" ]; then
-    alias proxectos='cd $DIR_PROJECTS; ls'
-    alias prx='cd $DIR_PROJECTS; ls'
+if [ -d "$DIR_SCRIPTS" ]; then
+    alias scripts='cd $HOME/.scripts; ls'
+    alias scr='cd $HOME/.scripts; ls'
 fi
 
-if [ -d "$DIR_SCRIPTS" ]; then
-    alias scripts='cd $DIR_SCRIPTS; ls'
-    alias scr='cd $DIR_SCRIPTS; ls'
+if [ -d "$DIR_PROJECTS" ]; then
+    alias proxectos='cd $HOME/proxectos; ls'
+    alias prx='cd $HOME/proxectos; ls'
 fi
 
 if [ -d "$DIR_PROJECT1" ]; then
-    alias bramework='cd $DIR_PROJECT1; ls'
-    alias bra='cd $DIR_PROJECT1; ls'
+    alias bramework='cd $HOME/proxectos/bramework; ls'
+    alias bra='cd $HOME/proxectos/bramework; ls'
 fi
 
 
