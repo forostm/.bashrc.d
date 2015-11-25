@@ -15,7 +15,6 @@ if [ -f $HOME/.scripts/scripts-alias.sh ]; then
     . $HOME/.scripts/scripts-alias.sh
 fi
 
-
 for i in $(ls $DIR/functions/)
 do
   . $DIR/functions/$i
