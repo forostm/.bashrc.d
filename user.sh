@@ -1,4 +1,5 @@
 # Configuración do prompt
+
 ## Colores por usuarios
 if [ $(echo $USER) == root ]; then
   USER_COLOR="1;31m"
@@ -7,12 +8,12 @@ else
 fi
 
 ## Colores por equipos
-if [ $(hostname) == $HOSTNAME_RASPBERRY ]; then
+if [ $(hostname) == "raspberry" ]; then
   HOST_COLOR="1;35m"  # Lila
-elif [ $(hostname) == $HOSTNAME_SERVER ]; then
+elif [ $(hostname) == "server" ]; then
   HOST_COLOR="1;90m"  # Gris
 else
-  HOST_COLOR="1;33m" # Amarillo
+  HOST_COLOR="1;33m"  # Amarillo
 fi
 
 export PS1='\[\e['$USER_COLOR'\]\u\[\e[m\]\[\e[1;30m\]@\[\e[m\]\[\e['$HOST_COLOR'\]\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\]\[\e[1;30m\]\$\[\e[m\]\[\e[1;35m\]$(__git_ps1 " (%s)")\[\e[m\] \[\e[1;30m\]>\[\e[m\] '
@@ -33,9 +34,9 @@ if [ -d "$DIR_SCRIPTS" ]; then
     PATH="$PATH:$DIR_SCRIPTS"
 fi
 
-if [ -f "/usr/bin/ruby" ]; then
-    PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
-fi
+#if [ -f "/usr/bin/ruby" ]; then
+#    PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
+#fi
 
 
 # Colorea a saída de less. (require instalar 'source-highlight')
