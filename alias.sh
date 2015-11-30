@@ -77,17 +77,17 @@ alias plantillas='cd $DIR_TEMPLATES; ls'
 alias videos='cd $DIR_VIDEO; ls'
 
 # Alias de directorios específicos
-if [ -d "$DIR_SCRIPTS" ]; then
+if [ -d "$HOME/.scripts" ]; then
     alias scripts='cd $HOME/.scripts; ls'
     alias scr='cd $HOME/.scripts; ls'
 fi
 
-if [ -d "$DIR_PROJECTS" ]; then
+if [ -d "$HOME/proxectos" ]; then
     alias proxectos='cd $HOME/proxectos; ls'
     alias prx='cd $HOME/proxectos; ls'
 fi
 
-if [ -d "$DIR_PROJECT1" ]; then
+if [ -d "$HOME/proxectos/bramework" ]; then
     alias bramework='cd $HOME/proxectos/bramework; ls'
     alias bra='cd $HOME/proxectos/bramework; ls'
 fi
