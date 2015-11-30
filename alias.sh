@@ -48,6 +48,12 @@ if [ $(hostname) == "laptop" ]; then
   alias serverftp='sftp $ISERVER'
 fi
 
+# Útiles só no servidor
+if [ $(hostname) == "server" ]; then
+alias www='cd /srv/www/; ls'
+alias sit-a='cd /etc/apache2/sites-avaiable/; ls'
+alias sit-e='cd /etc/apache2/sites-enabled/; ls'
+fi
 
 #i Alias de directorios xenéricos
 alias up='cd ..'
@@ -74,22 +80,22 @@ alias musica='cd $DIR_MUSIC; ls'
 alias imaxes='cd $DIR_PICTURES; ls'
 alias imx='cd $DIR_PICTURES; ls'
 alias plantillas='cd $DIR_TEMPLATES; ls'
-alias videos='cd $DIR_VIDEO; ls'
+alias videos='cd $DIR_VIDEOS; ls'
 
 # Alias de directorios específicos
-if [ -d "$HOME/.scripts" ]; then
-    alias scripts='cd $HOME/.scripts; ls'
-    alias scr='cd $HOME/.scripts; ls'
+if [ -d "$DIR_SCRIPTS" ]; then
+    alias scripts='cd $DIR_SCRIPTS; ls'
+    alias scr='cd $DIR_SCRIPTS; ls'
 fi
 
-if [ -d "$HOME/proxectos" ]; then
-    alias proxectos='cd $HOME/proxectos; ls'
-    alias prx='cd $HOME/proxectos; ls'
+if [ -d "$DIR_PROJECTS" ]; then
+    alias proxectos='cd $DIR_PROJECTS; ls'
+    alias prx='cd $DIR_PROJECTS; ls'
 fi
 
-if [ -d "$HOME/proxectos/bramework" ]; then
-    alias bramework='cd $HOME/proxectos/bramework; ls'
-    alias bra='cd $HOME/proxectos/bramework; ls'
+if [ -d "$DIR_BRAMEWORK" ]; then
+    alias bramework='cd $DIR_BRAMEWORK; ls'
+    alias bra='cd $DIR_BRAMEWORK; ls'
 fi
 
 

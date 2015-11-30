@@ -27,15 +27,26 @@ export IRASPBERRY="ivan@192.168.1.2"
 export SERVER="37.139.28.29"
 export ISERVER="ivan@37.139.28.29"
 
+export DIR_DOCS="$(xdg-user-dir DOCUMENTS)"
+export DIR_DOWNLOAD="$(xdg-user-dir DOWNLOAD)"
+export DIR_MUSIC="$(xdg-user-dir MUSIC)"
+export DIR_PICTURES="$(xdg-user-dir PICTURES)"
+export DIR_TEMPLATES="$(xdg-user-dir TEMPLATES)"
+export DIR_VIDEOS="$(xdg-user-dir VIDEOS)"
+
+export DIR_SCRIPTS="$HOME/.scripts"
+export DIR_PROJECTS="$HOME/proxectos"
+export DIR_BRAMEWORK="$HOME/proxectos/bramework"
+
 
 # Paths
 if [ -d "$DIR_SCRIPTS" ]; then
     PATH="$PATH:$DIR_SCRIPTS"
 fi
 
-#if [ -f "/usr/bin/ruby" ]; then
-#    PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
-#fi
+if [ -f "/usr/bin/ruby" ]; then
+    PATH="$PATH:/home/$USER/.gem/ruby/2.2.0/bin/"
+fi
 
 
 # Colorea a saída de less. (require instalar 'source-highlight')
