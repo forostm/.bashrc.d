@@ -26,5 +26,5 @@ cd $HOME && rm .bashrc .bash_profile && git clone https://github.com/barcia/.bas
 
 * In one line (SSH)   
 ```bash
-cd $HOME && rm .bashrc .bash_profile && git clone git@github.com:barcia/.bashrc.d.git && ln $HOME/.bashrc.d/bashrc $HOME/.bashrc && ln $HOME/.bashrc.d/bash_profile $HOME/.bash_profile && source $HOME/.bashrc
+bash <(curl -s https://gist.githubusercontent.com/barcia/ab29f5bdebd0441fd0c0/raw/bashrc-git.sh)
 ```
