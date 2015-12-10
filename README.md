@@ -6,12 +6,12 @@ https://github.com/barcia/.bashrc.d.git
 
 2.1\. Create a [hard link](https://en.wikipedia.org/wiki/Hard_link) for `.bashrc`   
 ```bash
-ln $HOME/.bashrc.d/bashrc $HOME/.bashrc
+ln $HOME/.bashrc.d/files/bashrc $HOME/.bashrc
 ```
 
 2.2\. Create a [hard link](https://en.wikipedia.org/wiki/Hard_link) for `.bash_profile`   
 ```bash
-ln $HOME/.bashrc.d/bash_profile $HOME/.bash_profile
+ln $HOME/.bashrc.d/files/bash_profile $HOME/.bash_profile
 ```
 
 3\. Load it   
