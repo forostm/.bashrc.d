@@ -21,10 +21,10 @@ source $HOME/.bashrc
 
 * In one line (HTTPS)   
 ```bash
-cd $HOME && git clone https://github.com/barcia/.bashrc.d.git && ln $HOME/.bashrc.d/bashrc $HOME/.bashrc && ln $HOME/.bashrc.d/bash_profile $HOME/.bash_profile && source $HOME/.bashrc
+cd $HOME && rm .bashrc .bash_profile && git clone https://github.com/barcia/.bashrc.d.git && ln $HOME/.bashrc.d/bashrc $HOME/.bashrc && ln $HOME/.bashrc.d/bash_profile $HOME/.bash_profile && source $HOME/.bashrc
 ```
 
 * In one line (SSH)   
 ```bash
-cd $HOME && git clone git@github.com:barcia/.bashrc.d.git && ln $HOME/.bashrc.d/bashrc $HOME/.bashrc && ln $HOME/.bashrc.d/bash_profile $HOME/.bash_profile && source $HOME/.bashrc
+cd $HOME && rm .bashrc .bash_profile && git clone git@github.com:barcia/.bashrc.d.git && ln $HOME/.bashrc.d/bashrc $HOME/.bashrc && ln $HOME/.bashrc.d/bash_profile $HOME/.bash_profile && source $HOME/.bashrc
 ```
