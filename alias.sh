@@ -28,16 +28,21 @@ alias cdb='cd "`cat $HOME/.cdsave`"; \rm $HOME/.cdsave'        # cd back: Volve 
 
 if [ -f '/usr/bin/vim' ]; then
   alias vi='vim'
+  alias svim='sudo vim'
 fi
-alias svim='sudo vim'
 alias skate='sudo kate'
 alias ngrok='ngrok http 80'
 alias webserver='sudo python -m http.server 80'
 alias ipext='curl ifconfig.me/ip'
 alias reload='source $HOME/.bashrc'
+
+alias bashdr='cd $HOME/.bashrc.d/; ls'
+alias bashalias='$EDITOR $HOME/.bashrc.d/alias.sh && source $HOME/.bashrc'
+alias bashset='$EDITOR $HOME/.bashrc.d/settings.sh && source $HOME/.bashrc'
+alias bashuser='$EDITOR $HOME/.bashrc.d/user.sh && source $HOME/.bashrc'
 alias bashrc='$EDITOR $HOME/.bashrc && source $HOME/.bashrc'
 alias bashpr='$EDITOR $HOME/.bash_profile && source $HOME/.bash_profile'
-alias bashdr='cd $HOME/.bashrc.d/; ls'
+
 
 
 # Útiles só no ordenador personal
@@ -50,12 +55,12 @@ fi
 
 # Útiles só no servidor
 if [ $(hostname) == "server" ]; then
-alias www='cd /srv/www/; ls'
-alias sit-a='cd /etc/apache2/sites-avaiable/; ls'
-alias sit-e='cd /etc/apache2/sites-enabled/; ls'
+  alias www='cd /srv/www/; ls'
+  alias sit-a='cd /etc/apache2/sites-avaiable/; ls'
+  alias sit-e='cd /etc/apache2/sites-enabled/; ls'
 fi
 
-#i Alias de directorios xenéricos
+# Alias de directorios xenéricos
 alias up='cd ..'
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -71,6 +76,7 @@ alias srv='cd /srv/; ls'
 alias tmp='cd /tmp/; ls'
 alias usr='cd /usr/; ls'
 alias var='cd /var/; ls'
+alias log='cd /var/log; ls'
 
 alias documentos='cd $DIR_DOCS; ls'
 alias doc='cd $DIR_DOCS; ls'
@@ -124,7 +130,6 @@ if [ -f /usr/bin/pacman ]; then
         echo "Eliminaronse paquetes orfos"
     fi
     sudo pacman -Scc # Elimina paquetes da caché
-    rm /var/crash/*  # Limpa os rexistros de erros
     }
 fi
 
