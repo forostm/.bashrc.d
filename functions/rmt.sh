@@ -1,7 +1,5 @@
 # Función para enviar contido á papeleira de reciclaxe da terminal
 
-# Non se crea a función no usuario root
-if [ ! $(echo $USER) == root ]; then 
   rmt() { 
     if [ ! -d $HOME/.local/share/Trash/terminal ]; then
       mkdir $HOME/.local/share/Trash/terminal
@@ -19,4 +17,3 @@ if [ ! $(echo $USER) == root ]; then
       echo-red "En total moveronse $REMOVED_ITEMS elementos á papeleira de reciclaxe"
     fi
   }
-fi
