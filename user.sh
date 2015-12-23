@@ -27,12 +27,12 @@ export IRASPBERRY="ivan@192.168.1.2"
 export SERVER="37.139.28.29"
 export ISERVER="ivan@37.139.28.29"
 
-export DIR_DOCS="~/documentos"
-export DIR_DOWNLOAD="~/descargas"
-export DIR_MUSIC="~/musica"
-export DIR_PICTURES="~/imaxes"
-export DIR_TEMPLATES="~/plantillas"
-export DIR_VIDEOS="~/videos"
+export DIR_DOCS="$HOME/documentos"
+export DIR_DOWNLOAD="$HOME/descargas"
+export DIR_MUSIC="$HOME/musica"
+export DIR_PICTURES="$HOME/imaxes"
+export DIR_TEMPLATES="$HOME/plantillas"
+export DIR_VIDEOS="$HOME/videos"
 
 export DIR_SCRIPTS="$HOME/.scripts"
 export DIR_PROJECTS="$HOME/proxectos"
@@ -52,12 +52,12 @@ fi
 # Colorea a saída de less. (require instalar 'source-highlight')
 # yaourt -S source-highlight
 if [ -f "/usr/bin/source-highlight-esc.sh" ]; then
-    export LESS=-R 
+    export LESS=-R
     export LESSOPEN="| /usr/bin/source-highlight-esc.sh %s"
 fi
 
 
-# Bash completion 
+# Bash completion
 # Recoméndase instalar 'bash-completion' que añade moitos autocompletados e ademáis carga automáticamente o contido do directorio '/etc/bash_completion.d'
 # yaourt -S bash-completion
 # Carga tódolos arquivos no directorio '/etc/bash_completion.d' se existe o directorio pero non está instalado 'bash-completion'

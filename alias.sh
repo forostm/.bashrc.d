@@ -1,7 +1,7 @@
 # Alias xenéricos
 alias l='ls'
 alias ls='ls -F --color --group-directories-first'  # Lista os directorios con / ó final | Amosa os directorios con cor | Coloca os directorios primeiro
-alias lsa='ls -A'          # Igual ó anterior, pero incluindo ficheiros ocultos 
+alias lsa='ls -A'          # Igual ó anterior, pero incluindo ficheiros ocultos
 alias lst='ls -tr1'        # Lista por orde de modificación (o máis recente de último)
 alias ll='ls -lh'          # Lista de forma detallada | amosa as unidades en formatos lexibles
 alias lla='ll -A'          # Igual ó anterior, pero amosando os ficheiros ocultos
@@ -87,6 +87,7 @@ alias imaxes='cd $DIR_PICTURES; ls'
 alias imx='cd $DIR_PICTURES; ls'
 alias plantillas='cd $DIR_TEMPLATES; ls'
 alias videos='cd $DIR_VIDEOS; ls'
+alias vid='cd $DIR_VIDEOS; ls'
 
 # Alias de directorios específicos
 if [ -d "$DIR_SCRIPTS" ]; then
