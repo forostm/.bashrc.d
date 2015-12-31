@@ -82,6 +82,8 @@ alias documentos='cd $DIR_DOCS; ls'
 alias doc='cd $DIR_DOCS; ls'
 alias descargas='cd $DIR_DOWNLOAD; ls'
 alias des='cd $DIR_DOWNLOAD; ls'
+alias mapas='cd $DIR_MAPS; ls'
+alias map='cd $DIR_MAPS; ls'
 alias musica='cd $DIR_MUSIC; ls'
 alias imaxes='cd $DIR_PICTURES; ls'
 alias imx='cd $DIR_PICTURES; ls'
@@ -89,7 +91,6 @@ alias plantillas='cd $DIR_TEMPLATES; ls'
 alias videos='cd $DIR_VIDEOS; ls'
 alias vid='cd $DIR_VIDEOS; ls'
 
-# Alias de directorios específicos
 if [ -d "$DIR_SCRIPTS" ]; then
     alias scripts='cd $DIR_SCRIPTS; ls'
     alias scr='cd $DIR_SCRIPTS; ls'

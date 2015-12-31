@@ -29,6 +29,7 @@ export ISERVER="ivan@37.139.28.29"
 
 export DIR_DOCS="$HOME/documentos"
 export DIR_DOWNLOAD="$HOME/descargas"
+export DIR_MAPS="$HOME/mapas"
 export DIR_MUSIC="$HOME/musica"
 export DIR_PICTURES="$HOME/imaxes"
 export DIR_TEMPLATES="$HOME/plantillas"
