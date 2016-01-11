@@ -19,7 +19,7 @@ fi
 if [ -f "/etc/bash_completion.d/git-prompt.sh" ]; then
   export PS1='\[\e['$USER_COLOR'\]\u\[\e[m\]\[\e[1;30m\]@\[\e[m\]\[\e['$HOST_COLOR'\]\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\]\[\e[1;30m\]\$\[\e[m\]\[\e[1;35m\]$(__git_ps1 " (%s)")\[\e[m\] \[\e[1;30m\]>\[\e[m\] '
 else
-  export PS1='\[\e['$USER_COLOR'\]\u\[\e[m\]\[\e[1;30m\]@\[\e[m\]\[\e['$HOST_COLOR'\]\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\]\[\e[1;30m\]\$\[\e[m\] '
+  export PS1='\[\e['$USER_COLOR'\]\u\[\e[m\]\[\e[1;30m\]@\[\e[m\]\[\e['$HOST_COLOR'\]\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\]\[\e[1;30m\]\$ >\[\e[m\] '
 fi
 
 # Variables globais
