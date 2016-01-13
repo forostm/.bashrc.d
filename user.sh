@@ -49,7 +49,7 @@ if [ -d "$DIR_SCRIPTS" ]; then
 fi
 
 if [ -f "/usr/bin/ruby" ]; then
-    PATH="$PATH:/home/$USER/.gem/ruby/2.2.0/bin/"
+    PATH="$PATH:$(ruby -e "print Gem.user_dir")/bin"
 fi
 
 
