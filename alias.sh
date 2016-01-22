@@ -67,6 +67,11 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
+alias ..l='cd ..; ls'
+alias ...l='cd ../..; ls'
+alias ....l='cd ../../..; ls'
+alias .....l='cd ../../../..; ls'
+alias ......l='cd ../../../../..; ls'
 
 alias home='cd $HOME; ls'
 
