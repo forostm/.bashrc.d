@@ -1,13 +1,13 @@
 # Configuración do prompt
 
-## Colores por usuarios
+## Cor do usuario root
 if [ $(echo $USER) == root ]; then
   USER_COLOR="1;31m"
 else
   USER_COLOR="1;33m"
 fi
 
-## Colores por equipos
+## Cores por equipos
 if [ $(hostname) == "raspberry" ]; then
   HOST_COLOR="1;35m"  # Lila
 elif [ $(hostname) == "server" ]; then

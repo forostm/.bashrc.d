@@ -3,17 +3,17 @@
 # bashrc.d: https://github.com/barcia/.bashrc.d
 # ln $HOME/.bashrc.d/bashrc $HOME/.bashrc
 
-DIR="$HOME/.bashrc.d"
+BASHRC_DIR="$HOME/.bashrc.d"
 
-. $DIR/settings.sh
-. $DIR/user.sh
-. $DIR/alias.sh
+. $BASHRC_DIR/settings.sh
+. $BASHRC_DIR/user.sh
+. $BASHRC_DIR/alias.sh
 
 if [ -f $HOME/.scripts/scripts-alias.sh ]; then
     . $HOME/.scripts/scripts-alias.sh
 fi
 
-for i in $(ls $DIR/functions/)
+for i in $(ls $BASHRC_DIR/functions/)
 do
-  . $DIR/functions/$i
+  . $BASHRC_DIR/functions/$i
 done

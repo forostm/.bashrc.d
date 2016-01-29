@@ -31,7 +31,6 @@ if [ -f '/usr/bin/vim' ]; then
   alias svim='sudo vim'
 fi
 alias skate='sudo kate'
-alias ngrok='ngrok http 80'
 alias webserver='sudo python -m http.server 80'
 alias ipext='curl ifconfig.me/ip'
 alias reload='source $HOME/.bashrc'
@@ -42,7 +41,6 @@ alias bashset='$EDITOR $HOME/.bashrc.d/settings.sh && source $HOME/.bashrc'
 alias bashuser='$EDITOR $HOME/.bashrc.d/user.sh && source $HOME/.bashrc'
 alias bashrc='$EDITOR $HOME/.bashrc && source $HOME/.bashrc'
 alias bashpr='$EDITOR $HOME/.bash_profile && source $HOME/.bash_profile'
-
 
 
 # Útiles só no ordenador personal
@@ -123,6 +121,33 @@ alias gpom='git push origin master'
 alias gck='git checkout'
 
 
+# Pacman
+alias pacs='sudo pacman -S' # Instalar paquetes
+alias pacss='sudo pacman -Ss' # Buscar paquetes
+alias pacsy='sudo pacman -Sy' # Actualizar repositorios se o precisan
+alias pacsy='sudo pacman -Sy' # Actualizar paquetes
+alias pacsyu='sudo pacman -Syu' # Actualizar paquetes (despois de act. repos.)
+alias pacsyy='sudo pacman -Syy' # Forzar actualizar repositorios
+alias pacsyyu='sudo pacman -Syyu' # Atualizar paquetes (despois de act. repos.)
+alias pacsi='sudo pacman -Si' # Información de un paquete
+alias pacsg='sudo pacman -Sg' # Amosa os paquetes de un grupo (Sen argumentos, amosa tódolos grupos)
+alias pacsc='sudo pacman -Sc' # Elimina da caché os paquetes que xa non están instalados
+alias pacscc='sudo pacman -Scc' # Elimina a caché de tódolos paquetes
+alias pacsw='sudo pacman -Sw' # Descarga o paquete, sen instalalo
+alias pacqd='sudo pacman -Qd' # Paquetes instalados como dependencias
+alias pacqe='sudo pacman -Qe' # Paquetes instalados explícitamente
+alias pacqt='sudo pacman -Qt' # Paquetes instalados que non son requeridos por outro paquete
+alias pacqi='sudo pacman -Qi' # Información de un paquete instalado
+alias pacqg='sudo pacman -Qg' # Amosa os paquetes instalados de un grupo (Sen argumentos, amosa tódolos grupos)
+alias pacqk='sudo pacman -Qk' # Verifica que estén tódolos arquivos do paquete (Sen argumentos, verifica tódolos paquetes)
+alias pacql='sudo pacman -Ql' # Lista tódolos arquivos creados por un paquete (Sen argumentos, amosa os de tódolos paquetes)
+alias pacqu='sudo pacman -Qu' # Paquetes actualizables
+alias pacqm='sudo pacman -Qm' # Paquetes descargados e instalados manualmente
+alias pacmrn='sudo pacman -Rn' # Elimina paquetes
+alias pacmrns='sudo pacman -Rns' # Elimina paquetes e as súas dependencias (sempre que non sexan requeridas por outros, e non se instalaran explícitamente)
+alias paclog='cat /var/log/pacman.log'
+alias paconf='sudo $EDITOR /etc/pacman.conf'
+
 # Administración de paquetes (Pacman e Yaourt)
 if [ -f /usr/bin/pacman ]; then
     alias pacman='sudo pacman'
@@ -132,8 +157,8 @@ if [ -f /usr/bin/pacman ]; then
     alias upgrade='yaourt -Syyua'
     alias uninstall='yaourt -Rns'
     sysclean() {
-    if [[ -n $(pacman -Qdt) ]]; then
-        sudo pacman -Rns $(pacman -Qdtq) # Elimina paquetes orfos
+    if [[ -n $(pacman -Qdttq) ]]; then
+        sudo pacman -Rns $(pacman -Qdttq) # Elimina paquetes orfos
         echo "Eliminaronse paquetes orfos"
     fi
     sudo pacman -Scc # Elimina paquetes da caché
